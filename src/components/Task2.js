@@ -16,6 +16,7 @@ const Task2 = () => {
     return () => {
       stopTimer();
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const createGrid = () => {
