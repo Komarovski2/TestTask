@@ -1,38 +1,130 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding-top: 20px;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.task-buttons {
+  display: flex;
+  justify-content: space-between;
+  max-width: 600px;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.task-buttons button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #007bff;
   color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  flex: 1;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.task-buttons button:hover {
+  background-color: #0056b3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.task {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+}
+
+.task-minesweeper .grid {
+  display: grid;
+  grid-template-columns: repeat(10, 30px);
+  gap: 1px;
+  background-color: #ccc;
+  padding: 1px;
+  width: fit-content;
+}
+
+.task-minesweeper .cell {
+  width: 30px;
+  height: 30px;
+  background-color: #bbb;
+  border: 1px solid #999;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.task-minesweeper .open {
+  background-color: #fff;
+}
+
+.task-minesweeper .mine {
+  background-color: red;
+}
+
+.task-minesweeper .flag {
+  background-color: yellow;
+}
+
+.message {
+  font-size: 18px;
+  font-weight: bold;
+  color: #d9534f;
+  margin: 10px 0;
+}
+
+.task-leaf .grid {
+  display: grid;
+  grid-template-columns: repeat(5, 30px);
+  gap: 1px;
+  background-color: #ccc;
+  padding: 1px;
+  width: fit-content;
+}
+
+.task-leaf .cell {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border: 1px solid #999;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.task-leaf .cell.cut {
+  background-color: gray;
+}
+
+.task input,
+.task select {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.task button {
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.task button:hover {
+  background-color: #218838;
 }
